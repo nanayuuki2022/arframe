@@ -24,7 +24,11 @@
           //markerLostはロスト検出時に呼ばれる
           this.el.sceneEl.addEventListener('markerLost', () => {
             this.isTracking=false;
-            console.log("tracking:"+ this. isTracking);    
+            console.log("tracking:"+ this. isTracking); 
+            var obj =this.data.arobject.object3D; //ARオブジェクトを取得
+            obj.position.set(0,0,-6); //z=-6 (画面置く方向に配置)
+            obj.quaternion.set ( 0,0,0,1); //姿勢を初期状態に戻す
+            obj.rotateX ( 3.14/2 ) ; //90度回転させて調整
           });   
         },
         tick: function (time, timeDelta) {
