@@ -5,22 +5,20 @@
     <title>Hello, WebVR! • A-Frame</title>
     <meta name="description" content="Hello, WebVR! • A-Frame">
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
   </head>
   <body>
-    <a-scene embedded arjs>
-      <a-marker preset="hiro">
-        <a-sphere position="0 1.25 -5" radius="1.25" src="https://nanayuuki2022.github.io/arframe/earth.jpg" shadow
-                  animation = "
-                               property : rotation;
-                               dur : 10000;
-                               from : 0 0 0;
-                               to : 0 360 0;
-                               loop : -1;
-                               easing : linear;
-                               "   >
-        </a-sphere>
-      </a-marker>
+    <a-scene background="color: #ECECEC">
+      <a-sphere position="0 1.25 -5" radius="1.25" src="https://nanayuuki2022.github.io/arframe/earth.jpg" shadow
+                animation = "
+                             property : rotation;
+                             dur : 10000;
+                             from : 0 0 0;
+                             to : 0 360 0;
+                             loop : -1;
+                             easing : linear;
+                             "   >
+      </a-sphere>
+      <a-sky src="https://nanayuuki2022.github.io/arframe/space.jpg"></a-sky>
     </a-scene>
   </body>
 </html>
